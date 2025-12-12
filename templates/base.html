@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Lido Letizia - Stabilimento Balneare & Ristorante{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lido Letizia - Stabilimento balneare, ristorante di pesce e lounge bar sulla spiaggia di Santa Maria del Cedro.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="{{ url_for('home') }}">Lido Letizia</a>
+      </div>
+      <nav class="nav">
+        <a href="{{ url_for('home') }}" class="{% if page == 'home' %}active{% endif %}">Home</a>
+        <a href="{{ url_for('stabilimento') }}" class="{% if page == 'stabilimento' %}active{% endif %}">Stabilimento balneare</a>
+        <a href="{{ url_for('ristorante') }}" class="{% if page == 'ristorante' %}active{% endif %}">Ristorante di Pesce</a>
+        <a href="{{ url_for('lounge') }}" class="{% if page == 'lounge' %}active{% endif %}">Lounge Bar</a>
+        <a href="{{ url_for('contatti') }}" class="btn-nav {% if page == 'contatti' %}active{% endif %}">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  {% block hero %}{% endblock %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Lido Letizia</h3>
+        <p>Stabilimento balneare - Ristorante di pesce - Lounge Bar</p>
+        <p>Santa Maria del Cedro (CS)</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('stabilimento') }}">Stabilimento balneare</a></li>
+          <li><a href="{{ url_for('ristorante') }}">Ristorante di Pesce</a></li>
+          <li><a href="{{ url_for('lounge') }}">Lounge Bar</a></li>
+          <li><a href="{{ url_for('contatti') }}">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <p>Telefono 1: +39 339 587 4411</p>
+        <p>Telefono 2: +39 351 810 3339</p>
+        <a class="btn-secondary" href="https://wa.me/393395874411" target="_blank" rel="noopener">
+          Prenota ora su WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Copyright © {{ 2025 }} Lido Letizia - Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
