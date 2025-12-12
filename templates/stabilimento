@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% set page = "stabilimento" %}
+
+{% block title %}Stabilimento balneare - Lido Letizia{% endblock %}
+
+{% block hero %}
+<section class="hero hero-small">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Stabilimento balneare</h1>
+    <p class="hero-subtitle">Relax, comfort e servizi per tutta la famiglia.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container two-columns">
+    <div>
+      <h2>La nostra spiaggia</h2>
+      <p>
+        Lettini, ombrelloni e cabine a pochi passi dal mare, con un servizio attento e professionale.
+        Area giochi coperta e animazione per i più piccoli, per una vacanza senza pensieri.
+      </p>
+      <p>
+        Possibilità di abbonamenti stagionali, giornalieri e formule personalizzate.
+      </p>
+      <a class="btn-primary" href="https://wa.me/393395874411" target="_blank" rel="noopener">
+        Richiedi informazioni
+      </a>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='img/stabilimento.jpg') }}" alt="Stabilimento balneare" class="responsive-img">
+    </div>
+  </div>
+</section>
+{% endblock %}
