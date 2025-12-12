@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% set page = "home" %}
+
+{% block title %}Lido Letizia - Ristorante, sulla spiaggia di Santa Maria del Cedro{% endblock %}
+
+{% block hero %}
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Lido Letizia - Ristorante, sulla spiaggia di Santa Maria del Cedro</h1>
+    <p class="hero-subtitle">Dal 1999 professionalità e ospitalità per concedervi una vacanza unica.</p>
+    <p>Vieni a scoprire tutti i nostri servizi: stabilimento balneare, ristorante di pesce, lounge bar, area giochi e spazi dog friendly.</p>
+    <a class="btn-primary" href="https://wa.me/393395874411" target="_blank" rel="noopener">
+      Prenota ora su WhatsApp
+    </a>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">I nostri servizi</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <div class="card-image" style="background-image:url('{{ url_for('static', filename='img/stabilimento.jpg') }}');"></div>
+        <div class="card-body">
+          <h3>Stabilimento balneare</h3>
+          <p>Ombrelloni, lettini e area giochi al coperto per godersi una giornata di relax in spiaggia.</p>
+          <a href="{{ url_for('stabilimento') }}" class="card-link">Scopri di più</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image" style="background-image:url('{{ url_for('static', filename='img/ristorante.jpg') }}');"></div>
+        <div class="card-body">
+          <h3>Ristorante di Pesce</h3>
+          <p>Aperto a pranzo e a cena per degustare le specialità di mare in riva al mare o in sala coperta.</p>
+          <a href="{{ url_for('ristorante') }}" class="card-link">Scopri di più</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image" style="background-image:url('{{ url_for('static', filename='img/lounge.jpg') }}');"></div>
+        <div class="card-body">
+          <h3>Lounge Bar &amp; Aperitif</h3>
+          <p>Aperitivi e cocktail accompagnati da proposte culinarie, in giardino o direttamente sulla spiaggia.</p>
+          <a href="{{ url_for('lounge') }}" class="card-link">Scopri di più</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image" style="background-image:url('{{ url_for('static', filename='img/dog-friendly.jpg') }}');"></div>
+        <div class="card-body">
+          <h3>Dog Friendly</h3>
+          <p>I vostri amici a quattro zampe sono i benvenuti in tutta la struttura, con spazi dedicati.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image" style="background-image:url('{{ url_for('static', filename='img/area-giochi.jpg') }}');"></div>
+        <div class="card-body">
+          <h3>Area giochi</h3>
+          <p>Intrattenimento per i più piccoli con ampia area giochi al coperto e servizio di animazione.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contatti-home">
+  <div class="container two-columns">
+    <div>
+      <h2>Contattaci</h2>
+      <p>O ancor meglio, vieni a trovarci di persona.</p>
+      <h3>Contatti</h3>
+      <p><strong>Antonio</strong><br>+39 339 587 4411</p>
+      <p><strong>Fabio</strong><br>+39 351 810 3339</p>
+
+      <h3>Orari di apertura</h3>
+      <p>Aperti tutti i giorni<br>dalle 8:00 alle 00:00</p>
+
+      <a class="btn-primary" href="https://wa.me/393395874411" target="_blank" rel="noopener">
+        Prenota ora su WhatsApp
+      </a>
+    </div>
+    <div>
+      <h3>Indirizzo</h3>
+      <p>
+        Lido Letizia - Stabilimento Balneare - Ristorante di Pesce<br>
+        Via Lungomare Giorgio Perlasca Snc<br>
+        87020 Santa Maria del Cedro (CS)
+
+</p>
+      <iframe
+        class="map-embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Bar+Lido+Letizia,+lungomare+marina+di+Santa+Maria+del+cedro,+Santa+Maria+del+Cedro,+Cosenza+87020,+Italy&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+{% endblock %}
